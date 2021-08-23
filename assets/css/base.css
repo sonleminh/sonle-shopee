@@ -1,4 +1,4 @@
-:root{
+:root {
     --primary-color: #fe6433;
     --white-color: #fff;
     --black-color: #000;
@@ -8,6 +8,7 @@
     --header-height: 120px;
     --navbar-height: 34px;
     --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
+    --header-sort-bar: 46px;
 }
 
 * {
@@ -22,15 +23,6 @@ html {
 }
 
 /* Responsive */
-.grid {
-    width: 1200px;
-    max-width: 100%;
-    margin: 0 auto;
-}
-
-.grid__full-width {
-    width: 100%;
-}
 
 .grid__row {
      display: flex;
@@ -185,6 +177,7 @@ html {
     right: 0;
     top: 25px;
     border-radius: 2px;
+    box-shadow: 0 1px 5px rgba(189, 189, 189);
     background-color: var(--white-color);
     padding: 8px 16px; 
     list-style: none;

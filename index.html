@@ -8,14 +8,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/main.css">  
+    <link rel="stylesheet" href="./assets/css/grid.css">  
+    <link rel="stylesheet" href="./assets/css/responsive.css">  
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.4-web/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
     <body>
         <div class="web">
             <header class="header">
-                <div class="grid">
-                    <nav class="header__navbar">
+                <div class="grid wide">
+                    <nav class="header__navbar hide-on-mobile-tablet">
                         <ul class="header__navbar-list">
                             <li class="header__navbar-item header__navbar-item--has-qr header__navbar-item--separate">
                                 Vào cửa hàng trên ứng dụng F8
@@ -117,8 +119,41 @@
                         </ul>
                     </nav>
 
+                    <label for="nav__mobile-input" class="navbar-btn">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg>
+                    </label>
+
+                    <input type="checkbox" name="" class="nav__input"id="nav__mobile-input">
+                    
+                    <label for="nav__mobile-input" class="nav__overlay"></label>
+ 
+                    <nav class="nav__mobile">
+                        <label for="nav__mobile-input" class="nav__mobile-close">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" class="svg-inline--fa fa-times fa-w-11" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg>
+                        </label>
+
+                        <ul class="nav__mobile-list">
+                            <li class="nav__mobile-item">
+                                <a href="" class="nav__mobile-link">Đăng nhập</a>
+                            </li>
+                            <li class="nav__mobile-item">
+                                <a href="" class="nav__mobile-link">Đăng ký</a>
+                            </li>
+                            <li class="nav__mobile-item">
+                                <a href="" class="nav__mobile-link">Dịch vụ</a>
+                            </li>
+                            <li class="nav__mobile-item">
+                                <a href="" class="nav__mobile-link">Liên hệ</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    
                     <!-- Header with search -->
                     <div class="header-with-search">
+                        <label for="mobile-search-checkbox" class="header__mobile-search">
+                            <i class="header__mobile-search-icon fas fa-search"></i>
+                        </label>
+
                         <div class="header__logo">
                             <a href="/" class="header__logo-link">
                                 <svg viewBox="0 0 192 65" class="header__logo-img">
@@ -130,6 +165,8 @@
                                 </svg>
                             </a>
                         </div>
+
+                        <input type="checkbox" hidden id="mobile-search-checkbox" class="header__search-checkbox">
 
                         <div class="header__search">
                             <div class="header__search-input-wrap">
@@ -219,120 +256,6 @@
                                                 </div>
                                             </div>                                        
                                         </li>
-                                        <li class="header__cart-item">
-                                            <img src="https://scontent.fdad4-1.fna.fbcdn.net/v/t1.6435-9/203911620_958089168068094_2336768250306741818_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=2-TYMqUecaYAX-cX87F&_nc_ht=scontent.fdad4-1.fna&oh=a76250be7f4027353cd12c0e354d1daf&oe=61453E1E" alt="" class="header__cart-img">
-                                            <div class="header__cart-item-info">
-                                                <div class="header__cart-item-head">
-                                                    <h5 class="header__cart-item-name">Bộ kem đặc trị mụn</h5>
-                                                    <div class="header__cart-item-price-wrap">
-                                                        <span class="header__cart-item-price">2.000.000đ</span>
-                                                        <span class="header__cart-item-multiply">x</span>
-                                                        <span class="header__cart-item-qnt">2</span>
-                                                    </div>
-                                                </div>
-                                                <div class="header__cart-item-body">
-                                                    <span class="header__cart-item-dsc">
-                                                        Phân loại: Bạc
-                                                    </span>
-                                                    <span class="header__cart-item-remove">Xóa</span>
-                                                </div>
-                                            </div>                                        
-                                        </li>
-                                        <li class="header__cart-item">
-                                            <img src="https://scontent.fdad4-1.fna.fbcdn.net/v/t1.6435-9/203911620_958089168068094_2336768250306741818_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=2-TYMqUecaYAX-cX87F&_nc_ht=scontent.fdad4-1.fna&oh=a76250be7f4027353cd12c0e354d1daf&oe=61453E1E" alt="" class="header__cart-img">
-                                            <div class="header__cart-item-info">
-                                                <div class="header__cart-item-head">
-                                                    <h5 class="header__cart-item-name">Bộ kem đặc trị mụn</h5>
-                                                    <div class="header__cart-item-price-wrap">
-                                                        <span class="header__cart-item-price">2.000.000đ</span>
-                                                        <span class="header__cart-item-multiply">x</span>
-                                                        <span class="header__cart-item-qnt">2</span>
-                                                    </div>
-                                                </div>
-                                                <div class="header__cart-item-body">
-                                                    <span class="header__cart-item-dsc">
-                                                        Phân loại: Bạc
-                                                    </span>
-                                                    <span class="header__cart-item-remove">Xóa</span>
-                                                </div>
-                                            </div>                                        
-                                        </li>
-                                        <li class="header__cart-item">
-                                            <img src="https://scontent.fdad4-1.fna.fbcdn.net/v/t1.6435-9/203911620_958089168068094_2336768250306741818_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=2-TYMqUecaYAX-cX87F&_nc_ht=scontent.fdad4-1.fna&oh=a76250be7f4027353cd12c0e354d1daf&oe=61453E1E" alt="" class="header__cart-img">
-                                            <div class="header__cart-item-info">
-                                                <div class="header__cart-item-head">
-                                                    <h5 class="header__cart-item-name">Bộ kem đặc trị mụn</h5>
-                                                    <div class="header__cart-item-price-wrap">
-                                                        <span class="header__cart-item-price">2.000.000đ</span>
-                                                        <span class="header__cart-item-multiply">x</span>
-                                                        <span class="header__cart-item-qnt">2</span>
-                                                    </div>
-                                                </div>
-                                                <div class="header__cart-item-body">
-                                                    <span class="header__cart-item-dsc">
-                                                        Phân loại: Bạc
-                                                    </span>
-                                                    <span class="header__cart-item-remove">Xóa</span>
-                                                </div>
-                                            </div>                                        
-                                        </li>
-                                        <li class="header__cart-item">
-                                            <img src="https://scontent.fdad4-1.fna.fbcdn.net/v/t1.6435-9/203911620_958089168068094_2336768250306741818_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=2-TYMqUecaYAX-cX87F&_nc_ht=scontent.fdad4-1.fna&oh=a76250be7f4027353cd12c0e354d1daf&oe=61453E1E" alt="" class="header__cart-img">
-                                            <div class="header__cart-item-info">
-                                                <div class="header__cart-item-head">
-                                                    <h5 class="header__cart-item-name">Bộ kem đặc trị mụn</h5>
-                                                    <div class="header__cart-item-price-wrap">
-                                                        <span class="header__cart-item-price">2.000.000đ</span>
-                                                        <span class="header__cart-item-multiply">x</span>
-                                                        <span class="header__cart-item-qnt">2</span>
-                                                    </div>
-                                                </div>
-                                                <div class="header__cart-item-body">
-                                                    <span class="header__cart-item-dsc">
-                                                        Phân loại: Bạc
-                                                    </span>
-                                                    <span class="header__cart-item-remove">Xóa</span>
-                                                </div>
-                                            </div>                                        
-                                        </li>
-                                        <li class="header__cart-item">
-                                            <img src="https://scontent.fdad4-1.fna.fbcdn.net/v/t1.6435-9/203911620_958089168068094_2336768250306741818_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=2-TYMqUecaYAX-cX87F&_nc_ht=scontent.fdad4-1.fna&oh=a76250be7f4027353cd12c0e354d1daf&oe=61453E1E" alt="" class="header__cart-img">
-                                            <div class="header__cart-item-info">
-                                                <div class="header__cart-item-head">
-                                                    <h5 class="header__cart-item-name">Bộ kem đặc trị mụn</h5>
-                                                    <div class="header__cart-item-price-wrap">
-                                                        <span class="header__cart-item-price">2.000.000đ</span>
-                                                        <span class="header__cart-item-multiply">x</span>
-                                                        <span class="header__cart-item-qnt">2</span>
-                                                    </div>
-                                                </div>
-                                                <div class="header__cart-item-body">
-                                                    <span class="header__cart-item-dsc">
-                                                        Phân loại: Bạc
-                                                    </span>
-                                                    <span class="header__cart-item-remove">Xóa</span>
-                                                </div>
-                                            </div>                                        
-                                        </li>
-                                        <li class="header__cart-item">
-                                            <img src="https://scontent.fdad4-1.fna.fbcdn.net/v/t1.6435-9/203911620_958089168068094_2336768250306741818_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=2-TYMqUecaYAX-cX87F&_nc_ht=scontent.fdad4-1.fna&oh=a76250be7f4027353cd12c0e354d1daf&oe=61453E1E" alt="" class="header__cart-img">
-                                            <div class="header__cart-item-info">
-                                                <div class="header__cart-item-head">
-                                                    <h5 class="header__cart-item-name">Bộ kem đặc trị mụn</h5>
-                                                    <div class="header__cart-item-price-wrap">
-                                                        <span class="header__cart-item-price">2.000.000đ</span>
-                                                        <span class="header__cart-item-multiply">x</span>
-                                                        <span class="header__cart-item-qnt">2</span>
-                                                    </div>
-                                                </div>
-                                                <div class="header__cart-item-body">
-                                                    <span class="header__cart-item-dsc">
-                                                        Phân loại: Bạc
-                                                    </span>
-                                                    <span class="header__cart-item-remove">Xóa</span>
-                                                </div>
-                                            </div>                                        
-                                        </li>
                                     </ul>
 
                                     <a class="header__cart-view-cart btn btn--primary">Xem giỏ hàng</a>
@@ -341,11 +264,25 @@
                         </div>
                     </div>
                 </div>
+                <ul class="header__sort-bar">
+                    <li class="header__sort-item">
+                        <a href="" class="header__sort-link">Liên quan</a>
+                    </li>
+                    <li class="header__sort-item header__sort-item--active">
+                        <a href="" class="header__sort-link">Mới nhất</a>
+                    </li>
+                    <li class="header__sort-item">
+                        <a href="" class="header__sort-link">Bán chạy</a>
+                    </li>
+                    <li class="header__sort-item">
+                        <a href="" class="header__sort-link">Giá</a>
+                    </li>
+                </ul>
             </header>
             <div class="web__container">
-                <div class="grid">
-                    <div class="grid__row">
-                        <div class="grid__column-2">
+                <div class="grid wide">
+                    <div class="row sm-gutter web__content">
+                        <div class="col l-2 m-0 c-0">
                             <nav class="category">
                                 <h3 class="category__heading">Danh mục</h3>
 
@@ -363,8 +300,8 @@
                             </nav>
                         </div>
     
-                        <div class="grid__column-10">
-                            <div class="home-filter">
+                        <div class="col l-10 m-12 c-12">
+                            <div class="home-filter hide-on-mobile-tablet">
                                 <span class="home-filter__label">Sắp xếp theo</span>
                                 <button class="home-filter-btn btn">Phổ biến</button>
                                 <button class="home-filter-btn btn btn--primary">Mới nhất</button>
@@ -402,11 +339,52 @@
                                 </div>
                             </div>
 
+                            <nav class="mobile-category">
+                                <ul class="mobile-category__list">
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                    </li>
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                    </li>
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                    </li>
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                    </li>
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                    </li>
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                    </li>
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                    </li>
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                    </li>
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                    </li>
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                    </li>
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                    </li>
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                    </li>
+                                </ul>
+                            </nav>
+
                             <div class="home-product ">
-                                <div class="grid__row">
+                                <div class="row sm-gutter">
                                     
                                     <!-- Product item -->
-                                    <div class="grid__column-2-4" href="#">
+                                    <div class="col l-2-4 m-4 c-6" href="#">
                                         <a href="#" class="home-product-item">
                                             <img src="https://cf.shopee.vn/file/b3cc2b038b79120c43e66b197fb0ad56" alt="" class="home-product-item-img">
                                             <h4 class="home-product-item__name">Kem Dưỡng Ẩm Tối Ưu Hada Labo Advanced Nourish Cream 50g</h4>
@@ -442,7 +420,79 @@
                                             </div>                                            
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4" href="#">
+                                    <div class="col l-2-4 m-4 c-6" href="#">
+                                        <a href="#" class="home-product-item">
+                                            <img src="https://cf.shopee.vn/file/3d96b231a30256b00f91da0df9a56a09" alt="" class="home-product-item-img">
+                                            <h4 class="home-product-item__name">Bộ Mặt Nạ Và Serum Breylee Loại Bỏ Mụn Đầu Đen Và Se Khít Lỗ Chân Lông Hiệu Quả 17ml (Có Bán Lẻ)</h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item__price-old">1.200.000đ</span>
+                                                <span class="home-product-item__price-current">999.000đ</span>
+                                            </div>
+                                            <div class="home-product-item__action">
+                                                <span class="home-product-item__like home-product-item__like--liked">
+                                                    <i class="home-product-item__like-icon-emty far fa-heart"></i>
+                                                    <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                                </span>
+                                                <div class="home-product-item__rating">
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <span class="home-product-item__sold">88 đã bán</span>
+                                            </div>
+                                            <div class="home-product-item__origin">
+                                                <span class="home-product-item__brand">Whoo</span>
+                                                <span class="home-product-item__origin-name">Hàn Quốc</span>
+                                            </div>
+                                            <div class="home-product-item__favourite">
+                                                <i class="fas fa-check"></i>
+                                                <span>Yêu thích</span>
+                                            </div>
+                                            <div class="home-product-item__sale-off">
+                                                <span class="home-product-item__sale-off-percent">10%</span>
+                                                <span class="home-product-item__sale-off-label">GIẢM</span>
+                                            </div>                                            
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-4 c-6" href="#">
+                                        <a href="#" class="home-product-item">
+                                            <img src="https://cf.shopee.vn/file/ab9a99e1d52ac9b10f3c50dde0ad1903" alt="" class="home-product-item-img">
+                                            <h4 class="home-product-item__name">Gel rửa mặt tạo bọt cho da dầu nhạy cảm La Roche-Posay 400ml</h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item__price-old">1.200.000đ</span>
+                                                <span class="home-product-item__price-current">999.000đ</span>
+                                            </div>
+                                            <div class="home-product-item__action">
+                                                <span class="home-product-item__like home-product-item__like--liked">
+                                                    <i class="home-product-item__like-icon-emty far fa-heart"></i>
+                                                    <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                                </span>
+                                                <div class="home-product-item__rating">
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <span class="home-product-item__sold">88 đã bán</span>
+                                            </div>
+                                            <div class="home-product-item__origin">
+                                                <span class="home-product-item__brand">Whoo</span>
+                                                <span class="home-product-item__origin-name">Hàn Quốc</span>
+                                            </div>
+                                            <div class="home-product-item__favourite">
+                                                <i class="fas fa-check"></i>
+                                                <span>Yêu thích</span>
+                                            </div>
+                                            <div class="home-product-item__sale-off">
+                                                <span class="home-product-item__sale-off-percent">10%</span>
+                                                <span class="home-product-item__sale-off-label">GIẢM</span>
+                                            </div>                                            
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-4 c-6" href="#">
                                         <a href="#" class="home-product-item">
                                             <img src="https://cf.shopee.vn/file/b3cc2b038b79120c43e66b197fb0ad56" alt="" class="home-product-item-img">
                                             <h4 class="home-product-item__name">Kem Dưỡng Ẩm Tối Ưu Hada Labo Advanced Nourish Cream 50g</h4>
@@ -478,7 +528,79 @@
                                             </div>                                            
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4" href="#">
+                                    <div class="col l-2-4 m-4 c-6" href="#">
+                                        <a href="#" class="home-product-item">
+                                            <img src="https://cf.shopee.vn/file/3d96b231a30256b00f91da0df9a56a09" alt="" class="home-product-item-img">
+                                            <h4 class="home-product-item__name">Bộ Mặt Nạ Và Serum Breylee Loại Bỏ Mụn Đầu Đen Và Se Khít Lỗ Chân Lông Hiệu Quả 17ml (Có Bán Lẻ)</h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item__price-old">1.200.000đ</span>
+                                                <span class="home-product-item__price-current">999.000đ</span>
+                                            </div>
+                                            <div class="home-product-item__action">
+                                                <span class="home-product-item__like home-product-item__like--liked">
+                                                    <i class="home-product-item__like-icon-emty far fa-heart"></i>
+                                                    <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                                </span>
+                                                <div class="home-product-item__rating">
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <span class="home-product-item__sold">88 đã bán</span>
+                                            </div>
+                                            <div class="home-product-item__origin">
+                                                <span class="home-product-item__brand">Whoo</span>
+                                                <span class="home-product-item__origin-name">Hàn Quốc</span>
+                                            </div>
+                                            <div class="home-product-item__favourite">
+                                                <i class="fas fa-check"></i>
+                                                <span>Yêu thích</span>
+                                            </div>
+                                            <div class="home-product-item__sale-off">
+                                                <span class="home-product-item__sale-off-percent">10%</span>
+                                                <span class="home-product-item__sale-off-label">GIẢM</span>
+                                            </div>                                            
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-4 c-6" href="#">
+                                        <a href="#" class="home-product-item">
+                                            <img src="https://cf.shopee.vn/file/ab9a99e1d52ac9b10f3c50dde0ad1903" alt="" class="home-product-item-img">
+                                            <h4 class="home-product-item__name">Gel rửa mặt tạo bọt cho da dầu nhạy cảm La Roche-Posay 400ml</h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item__price-old">1.200.000đ</span>
+                                                <span class="home-product-item__price-current">999.000đ</span>
+                                            </div>
+                                            <div class="home-product-item__action">
+                                                <span class="home-product-item__like home-product-item__like--liked">
+                                                    <i class="home-product-item__like-icon-emty far fa-heart"></i>
+                                                    <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                                </span>
+                                                <div class="home-product-item__rating">
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <span class="home-product-item__sold">88 đã bán</span>
+                                            </div>
+                                            <div class="home-product-item__origin">
+                                                <span class="home-product-item__brand">Whoo</span>
+                                                <span class="home-product-item__origin-name">Hàn Quốc</span>
+                                            </div>
+                                            <div class="home-product-item__favourite">
+                                                <i class="fas fa-check"></i>
+                                                <span>Yêu thích</span>
+                                            </div>
+                                            <div class="home-product-item__sale-off">
+                                                <span class="home-product-item__sale-off-percent">10%</span>
+                                                <span class="home-product-item__sale-off-label">GIẢM</span>
+                                            </div>                                            
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-4 c-6" href="#">
                                         <a href="#" class="home-product-item">
                                             <img src="https://cf.shopee.vn/file/b3cc2b038b79120c43e66b197fb0ad56" alt="" class="home-product-item-img">
                                             <h4 class="home-product-item__name">Kem Dưỡng Ẩm Tối Ưu Hada Labo Advanced Nourish Cream 50g</h4>
@@ -514,7 +636,79 @@
                                             </div>                                            
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4" href="#">
+                                    <div class="col l-2-4 m-4 c-6" href="#">
+                                        <a href="#" class="home-product-item">
+                                            <img src="https://cf.shopee.vn/file/3d96b231a30256b00f91da0df9a56a09" alt="" class="home-product-item-img">
+                                            <h4 class="home-product-item__name">Bộ Mặt Nạ Và Serum Breylee Loại Bỏ Mụn Đầu Đen Và Se Khít Lỗ Chân Lông Hiệu Quả 17ml (Có Bán Lẻ)</h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item__price-old">1.200.000đ</span>
+                                                <span class="home-product-item__price-current">999.000đ</span>
+                                            </div>
+                                            <div class="home-product-item__action">
+                                                <span class="home-product-item__like home-product-item__like--liked">
+                                                    <i class="home-product-item__like-icon-emty far fa-heart"></i>
+                                                    <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                                </span>
+                                                <div class="home-product-item__rating">
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <span class="home-product-item__sold">88 đã bán</span>
+                                            </div>
+                                            <div class="home-product-item__origin">
+                                                <span class="home-product-item__brand">Whoo</span>
+                                                <span class="home-product-item__origin-name">Hàn Quốc</span>
+                                            </div>
+                                            <div class="home-product-item__favourite">
+                                                <i class="fas fa-check"></i>
+                                                <span>Yêu thích</span>
+                                            </div>
+                                            <div class="home-product-item__sale-off">
+                                                <span class="home-product-item__sale-off-percent">10%</span>
+                                                <span class="home-product-item__sale-off-label">GIẢM</span>
+                                            </div>                                            
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-4 c-6" href="#">
+                                        <a href="#" class="home-product-item">
+                                            <img src="https://cf.shopee.vn/file/ab9a99e1d52ac9b10f3c50dde0ad1903" alt="" class="home-product-item-img">
+                                            <h4 class="home-product-item__name">Gel rửa mặt tạo bọt cho da dầu nhạy cảm La Roche-Posay 400ml</h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item__price-old">1.200.000đ</span>
+                                                <span class="home-product-item__price-current">999.000đ</span>
+                                            </div>
+                                            <div class="home-product-item__action">
+                                                <span class="home-product-item__like home-product-item__like--liked">
+                                                    <i class="home-product-item__like-icon-emty far fa-heart"></i>
+                                                    <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                                </span>
+                                                <div class="home-product-item__rating">
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <span class="home-product-item__sold">88 đã bán</span>
+                                            </div>
+                                            <div class="home-product-item__origin">
+                                                <span class="home-product-item__brand">Whoo</span>
+                                                <span class="home-product-item__origin-name">Hàn Quốc</span>
+                                            </div>
+                                            <div class="home-product-item__favourite">
+                                                <i class="fas fa-check"></i>
+                                                <span>Yêu thích</span>
+                                            </div>
+                                            <div class="home-product-item__sale-off">
+                                                <span class="home-product-item__sale-off-percent">10%</span>
+                                                <span class="home-product-item__sale-off-label">GIẢM</span>
+                                            </div>                                            
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-4 c-6" href="#">
                                         <a href="#" class="home-product-item">
                                             <img src="https://cf.shopee.vn/file/b3cc2b038b79120c43e66b197fb0ad56" alt="" class="home-product-item-img">
                                             <h4 class="home-product-item__name">Kem Dưỡng Ẩm Tối Ưu Hada Labo Advanced Nourish Cream 50g</h4>
@@ -550,7 +744,79 @@
                                             </div>                                            
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4" href="#">
+                                    <div class="col l-2-4 m-4 c-6" href="#">
+                                        <a href="#" class="home-product-item">
+                                            <img src="https://cf.shopee.vn/file/3d96b231a30256b00f91da0df9a56a09" alt="" class="home-product-item-img">
+                                            <h4 class="home-product-item__name">Bộ Mặt Nạ Và Serum Breylee Loại Bỏ Mụn Đầu Đen Và Se Khít Lỗ Chân Lông Hiệu Quả 17ml (Có Bán Lẻ)</h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item__price-old">1.200.000đ</span>
+                                                <span class="home-product-item__price-current">999.000đ</span>
+                                            </div>
+                                            <div class="home-product-item__action">
+                                                <span class="home-product-item__like home-product-item__like--liked">
+                                                    <i class="home-product-item__like-icon-emty far fa-heart"></i>
+                                                    <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                                </span>
+                                                <div class="home-product-item__rating">
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <span class="home-product-item__sold">88 đã bán</span>
+                                            </div>
+                                            <div class="home-product-item__origin">
+                                                <span class="home-product-item__brand">Whoo</span>
+                                                <span class="home-product-item__origin-name">Hàn Quốc</span>
+                                            </div>
+                                            <div class="home-product-item__favourite">
+                                                <i class="fas fa-check"></i>
+                                                <span>Yêu thích</span>
+                                            </div>
+                                            <div class="home-product-item__sale-off">
+                                                <span class="home-product-item__sale-off-percent">10%</span>
+                                                <span class="home-product-item__sale-off-label">GIẢM</span>
+                                            </div>                                            
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-4 c-6" href="#">
+                                        <a href="#" class="home-product-item">
+                                            <img src="https://cf.shopee.vn/file/ab9a99e1d52ac9b10f3c50dde0ad1903" alt="" class="home-product-item-img">
+                                            <h4 class="home-product-item__name">Gel rửa mặt tạo bọt cho da dầu nhạy cảm La Roche-Posay 400ml</h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item__price-old">1.200.000đ</span>
+                                                <span class="home-product-item__price-current">999.000đ</span>
+                                            </div>
+                                            <div class="home-product-item__action">
+                                                <span class="home-product-item__like home-product-item__like--liked">
+                                                    <i class="home-product-item__like-icon-emty far fa-heart"></i>
+                                                    <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                                </span>
+                                                <div class="home-product-item__rating">
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <span class="home-product-item__sold">88 đã bán</span>
+                                            </div>
+                                            <div class="home-product-item__origin">
+                                                <span class="home-product-item__brand">Whoo</span>
+                                                <span class="home-product-item__origin-name">Hàn Quốc</span>
+                                            </div>
+                                            <div class="home-product-item__favourite">
+                                                <i class="fas fa-check"></i>
+                                                <span>Yêu thích</span>
+                                            </div>
+                                            <div class="home-product-item__sale-off">
+                                                <span class="home-product-item__sale-off-percent">10%</span>
+                                                <span class="home-product-item__sale-off-label">GIẢM</span>
+                                            </div>                                            
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-4 c-6" href="#">
                                         <a href="#" class="home-product-item">
                                             <img src="https://cf.shopee.vn/file/b3cc2b038b79120c43e66b197fb0ad56" alt="" class="home-product-item-img">
                                             <h4 class="home-product-item__name">Kem Dưỡng Ẩm Tối Ưu Hada Labo Advanced Nourish Cream 50g</h4>
@@ -586,10 +852,10 @@
                                             </div>                                            
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4" href="#">
+                                    <div class="col l-2-4 m-4 c-6" href="#">
                                         <a href="#" class="home-product-item">
-                                            <img src="https://cf.shopee.vn/file/b3cc2b038b79120c43e66b197fb0ad56" alt="" class="home-product-item-img">
-                                            <h4 class="home-product-item__name">Kem Dưỡng Ẩm Tối Ưu Hada Labo Advanced Nourish Cream 50g</h4>
+                                            <img src="https://cf.shopee.vn/file/3d96b231a30256b00f91da0df9a56a09" alt="" class="home-product-item-img">
+                                            <h4 class="home-product-item__name">Bộ Mặt Nạ Và Serum Breylee Loại Bỏ Mụn Đầu Đen Và Se Khít Lỗ Chân Lông Hiệu Quả 17ml (Có Bán Lẻ)</h4>
                                             <div class="home-product-item__price">
                                                 <span class="home-product-item__price-old">1.200.000đ</span>
                                                 <span class="home-product-item__price-current">999.000đ</span>
@@ -622,10 +888,10 @@
                                             </div>                                            
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4" href="#">
+                                    <div class="col l-2-4 m-4 c-6" href="#">
                                         <a href="#" class="home-product-item">
-                                            <img src="https://cf.shopee.vn/file/b3cc2b038b79120c43e66b197fb0ad56" alt="" class="home-product-item-img">
-                                            <h4 class="home-product-item__name">Kem Dưỡng Ẩm Tối Ưu Hada Labo Advanced Nourish Cream 50g</h4>
+                                            <img src="https://cf.shopee.vn/file/ab9a99e1d52ac9b10f3c50dde0ad1903" alt="" class="home-product-item-img">
+                                            <h4 class="home-product-item__name">Gel rửa mặt tạo bọt cho da dầu nhạy cảm La Roche-Posay 400ml</h4>
                                             <div class="home-product-item__price">
                                                 <span class="home-product-item__price-old">1.200.000đ</span>
                                                 <span class="home-product-item__price-current">999.000đ</span>
@@ -657,115 +923,7 @@
                                                 <span class="home-product-item__sale-off-label">GIẢM</span>
                                             </div>                                            
                                         </a>
-                                    </div>
-                                    <div class="grid__column-2-4" href="#">
-                                        <a href="#" class="home-product-item">
-                                            <img src="https://cf.shopee.vn/file/b3cc2b038b79120c43e66b197fb0ad56" alt="" class="home-product-item-img">
-                                            <h4 class="home-product-item__name">Kem Dưỡng Ẩm Tối Ưu Hada Labo Advanced Nourish Cream 50g</h4>
-                                            <div class="home-product-item__price">
-                                                <span class="home-product-item__price-old">1.200.000đ</span>
-                                                <span class="home-product-item__price-current">999.000đ</span>
-                                            </div>
-                                            <div class="home-product-item__action">
-                                                <span class="home-product-item__like home-product-item__like--liked">
-                                                    <i class="home-product-item__like-icon-emty far fa-heart"></i>
-                                                    <i class="home-product-item__like-icon-fill fas fa-heart"></i>
-                                                </span>
-                                                <div class="home-product-item__rating">
-                                                    <i class="home-product-item__star--gold fas fa-star"></i>
-                                                    <i class="home-product-item__star--gold fas fa-star"></i>
-                                                    <i class="home-product-item__star--gold fas fa-star"></i>
-                                                    <i class="home-product-item__star--gold fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                </div>
-                                                <span class="home-product-item__sold">88 đã bán</span>
-                                            </div>
-                                            <div class="home-product-item__origin">
-                                                <span class="home-product-item__brand">Whoo</span>
-                                                <span class="home-product-item__origin-name">Hàn Quốc</span>
-                                            </div>
-                                            <div class="home-product-item__favourite">
-                                                <i class="fas fa-check"></i>
-                                                <span>Yêu thích</span>
-                                            </div>
-                                            <div class="home-product-item__sale-off">
-                                                <span class="home-product-item__sale-off-percent">10%</span>
-                                                <span class="home-product-item__sale-off-label">GIẢM</span>
-                                            </div>                                            
-                                        </a>
-                                    </div>
-                                    <div class="grid__column-2-4" href="#">
-                                        <a href="#" class="home-product-item">
-                                            <img src="https://cf.shopee.vn/file/b3cc2b038b79120c43e66b197fb0ad56" alt="" class="home-product-item-img">
-                                            <h4 class="home-product-item__name">Kem Dưỡng Ẩm Tối Ưu Hada Labo Advanced Nourish Cream 50g</h4>
-                                            <div class="home-product-item__price">
-                                                <span class="home-product-item__price-old">1.200.000đ</span>
-                                                <span class="home-product-item__price-current">999.000đ</span>
-                                            </div>
-                                            <div class="home-product-item__action">
-                                                <span class="home-product-item__like home-product-item__like--liked">
-                                                    <i class="home-product-item__like-icon-emty far fa-heart"></i>
-                                                    <i class="home-product-item__like-icon-fill fas fa-heart"></i>
-                                                </span>
-                                                <div class="home-product-item__rating">
-                                                    <i class="home-product-item__star--gold fas fa-star"></i>
-                                                    <i class="home-product-item__star--gold fas fa-star"></i>
-                                                    <i class="home-product-item__star--gold fas fa-star"></i>
-                                                    <i class="home-product-item__star--gold fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                </div>
-                                                <span class="home-product-item__sold">88 đã bán</span>
-                                            </div>
-                                            <div class="home-product-item__origin">
-                                                <span class="home-product-item__brand">Whoo</span>
-                                                <span class="home-product-item__origin-name">Hàn Quốc</span>
-                                            </div>
-                                            <div class="home-product-item__favourite">
-                                                <i class="fas fa-check"></i>
-                                                <span>Yêu thích</span>
-                                            </div>
-                                            <div class="home-product-item__sale-off">
-                                                <span class="home-product-item__sale-off-percent">10%</span>
-                                                <span class="home-product-item__sale-off-label">GIẢM</span>
-                                            </div>                                            
-                                        </a>
-                                    </div>
-                                    <div class="grid__column-2-4" href="#">
-                                        <a href="#" class="home-product-item">
-                                            <img src="https://cf.shopee.vn/file/b3cc2b038b79120c43e66b197fb0ad56" alt="" class="home-product-item-img">
-                                            <h4 class="home-product-item__name">Kem Dưỡng Ẩm Tối Ưu Hada Labo Advanced Nourish Cream 50g</h4>
-                                            <div class="home-product-item__price">
-                                                <span class="home-product-item__price-old">1.200.000đ</span>
-                                                <span class="home-product-item__price-current">999.000đ</span>
-                                            </div>
-                                            <div class="home-product-item__action">
-                                                <span class="home-product-item__like home-product-item__like--liked">
-                                                    <i class="home-product-item__like-icon-emty far fa-heart"></i>
-                                                    <i class="home-product-item__like-icon-fill fas fa-heart"></i>
-                                                </span>
-                                                <div class="home-product-item__rating">
-                                                    <i class="home-product-item__star--gold fas fa-star"></i>
-                                                    <i class="home-product-item__star--gold fas fa-star"></i>
-                                                    <i class="home-product-item__star--gold fas fa-star"></i>
-                                                    <i class="home-product-item__star--gold fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                </div>
-                                                <span class="home-product-item__sold">88 đã bán</span>
-                                            </div>
-                                            <div class="home-product-item__origin">
-                                                <span class="home-product-item__brand">Whoo</span>
-                                                <span class="home-product-item__origin-name">Hàn Quốc</span>
-                                            </div>
-                                            <div class="home-product-item__favourite">
-                                                <i class="fas fa-check"></i>
-                                                <span>Yêu thích</span>
-                                            </div>
-                                            <div class="home-product-item__sale-off">
-                                                <span class="home-product-item__sale-off-percent">10%</span>
-                                                <span class="home-product-item__sale-off-label">GIẢM</span>
-                                            </div>                                            
-                                        </a>
-                                    </div>                                                                                                                                                                                                                                  
+                                    </div>                                                                                                                                                                                                                          
                                 </div>
                             </div>
 
@@ -807,9 +965,9 @@
                 </div>
             </div>
             <footer class="footer">
-                <div class="grid">
-                    <div class="grid__row">
-                        <div class="grid__column-2-4">
+                <div class="grid wide footer__content">
+                    <div class="row">
+                        <div class="col l-2-4 m-4 c-6">
                             <h3 class="footer__heading">Chăm sóc khách hàng</h3>
                             <ul class="footer-list">
                                 <li class="footer-item">
@@ -823,7 +981,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="grid__column-2-4">
+                        <div class="col l-2-4 m-4 c-6">
                             <h3 class="footer__heading">Giới thiệu</h3>
                             <ul class="footer-list">
                                 <li class="footer-item">
@@ -837,7 +995,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="grid__column-2-4">
+                        <div class="col l-2-4 m-4 c-6">
                             <h3 class="footer__heading">Danh mục</h3>
                             <ul class="footer-list">
                                 <li class="footer-item">
@@ -851,7 +1009,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="grid__column-2-4">
+                        <div class="col l-2-4 m-4 c-6">
                             <h3 class="footer__heading">Theo dõi</h3>
                             <ul class="footer-list">
                                 <li class="footer-item">
@@ -874,15 +1032,15 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="grid__column-2-4">
-                            <h3 class="footer__heading">Vào cửa hàng trên ứng</h3>
+                        <div class="col l-2-4 m-4 c-12">
+                            <h3 class="footer__heading">Vào cửa hàng trên ứng dụng</h3>
                             <div class="footer__download">
                                 <img src="/assets/img/qr_code.png" alt="Downlaod QR" class="footer__download-qr">
                                 <div class="footer__download-apps">
-                                    <a href="" class="footer__donwload-app-link">
+                                    <a href="" class="footer__download-app-link">
                                         <img src="/assets/img/google_play.png" alt="Google Play" class="footer__donwload-app-img">
                                     </a>
-                                    <a href="" class="footer__donwload-app-link">
+                                    <a href="" class="footer__download-app-link">
                                         <img src="/assets/img/appstore.png" alt="Appstore" class="footer__donwload-app-img">
                                     </a>
                                 </div>
@@ -892,7 +1050,7 @@
                 </div>
 
                 <div class="footer__bottom">
-                    <div class="grid">
+                    <div class="grid wide">
                             <p class="footer__text">© 2015 - Bản quyền thuộc về Công ty TNHH Son Le Le</p>
                     </div>
                 </div>
